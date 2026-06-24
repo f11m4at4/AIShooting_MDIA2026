@@ -1,0 +1,20 @@
+EnemyExplosion generator entrypoint
+
+Run this from a Unity 6000.x editor for this project:
+
+- Menu: Tools/HO/Create Enemy Explosion Effect
+- Batch mode: -executeMethod HO_CreateEnemyExplosionEffect.CreateAssets
+
+Expected generated assets:
+
+- Assets/Effects/EnemyExplosion.prefab
+- Assets/Effects/EnemyExplosionSmoke.png
+- Assets/Effects/EnemyExplosionBurst.png
+- Assets/Effects/EnemyExplosionSmoke.mat
+- Assets/Effects/EnemyExplosionBurst.mat
+
+The generator creates an unlit particle effect with:
+
+- a bright stylized flash
+- a short additive burst
+- expanding smoke

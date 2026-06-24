@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6FBFF"/>
+      <stop offset="1" stop-color="#EEF6EA"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.96"/>
+      <stop offset="1" stop-color="#F7FAFC" stop-opacity="0.96"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#264653" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#2B6CB0"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#2F855A"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#C05621"/>
+    </marker>
+    <marker id="arrowGray" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#4A5568"/>
+    </marker>
+    <style>
+      text {
+        font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        fill: #1A202C;
+      }
+      .title {
+        font-size: 34px;
+        font-weight: 700;
+      }
+      .subtitle {
+        font-size: 17px;
+        fill: #4A5568;
+      }
+      .section {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      .taskNo {
+        font-size: 18px;
+        font-weight: 700;
+        fill: #2B6CB0;
+      }
+      .taskName {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .body {
+        font-size: 15px;
+        fill: #2D3748;
+      }
+      .small {
+        font-size: 14px;
+        fill: #4A5568;
+      }
+      .flowLabel {
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .note {
+        font-size: 16px;
+        fill: #2D3748;
+      }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)"/>
+
+  <rect x="48" y="40" width="1504" height="1120" rx="32" fill="url(#panel)" filter="url(#shadow)"/>
+
+  <text x="90" y="105" class="title">AIShooting Tasks 관계도</text>
+  <text x="90" y="138" class="subtitle">기준 폴더: Assets/Tasks | 구현 순서와 런타임 상호작용을 한 장에 함께 정리</text>
+
+  <text x="90" y="205" class="section">1. 구현 순서와 의존성</text>
+
+  <rect x="90" y="235" width="220" height="132" rx="22" fill="#E8F2FF" stroke="#90CDF4" stroke-width="2"/>
+  <text x="112" y="270" class="taskNo">01</text>
+  <text x="112" y="302" class="taskName">HO_PlayerController</text>
+  <text x="112" y="330" class="body">플레이어 이동, 발사, HP,</text>
+  <text x="112" y="352" class="body">사망 상태의 기초 축</text>
+
+  <rect x="350" y="235" width="220" height="132" rx="22" fill="#EAFBF3" stroke="#9AE6B4" stroke-width="2"/>
+  <text x="372" y="270" class="taskNo">02</text>
+  <text x="372" y="302" class="taskName">HO_PlayerBullet</text>
+  <text x="372" y="330" class="body">발사체 이동, 적 충돌,</text>
+  <text x="372" y="352" class="body">대미지 전달</text>
+
+  <rect x="610" y="235" width="220" height="132" rx="22" fill="#FFF6E8" stroke="#F6AD55" stroke-width="2"/>
+  <text x="632" y="270" class="taskNo">03</text>
+  <text x="632" y="302" class="taskName">HO_Enemy</text>
+  <text x="632" y="330" class="body">적 이동, 플레이어 충돌,</text>
+  <text x="632" y="352" class="body">피격 처리</text>
+
+  <rect x="870" y="235" width="220" height="132" rx="22" fill="#F4EEFF" stroke="#B794F4" stroke-width="2"/>
+  <text x="892" y="270" class="taskNo">04</text>
+  <text x="892" y="302" class="taskName">HO_GameManager</text>
+  <text x="892" y="330" class="body">점수, 게임 상태,</text>
+  <text x="892" y="352" class="body">게임오버 관리</text>
+
+  <rect x="1130" y="235" width="220" height="132" rx="22" fill="#E9FAF7" stroke="#4FD1C5" stroke-width="2"/>
+  <text x="1152" y="270" class="taskNo">05</text>
+  <text x="1152" y="302" class="taskName">HO_EnemySpawner</text>
+  <text x="1152" y="330" class="body">적 생성, 스폰 위치,</text>
+  <text x="1152" y="352" class="body">게임오버 시 중단</text>
+
+  <rect x="1260" y="405" width="220" height="132" rx="22" fill="#FFF9E6" stroke="#ECC94B" stroke-width="2"/>
+  <text x="1282" y="440" class="taskNo">06</text>
+  <text x="1282" y="472" class="taskName">HO_UIController</text>
+  <text x="1282" y="500" class="body">HP Slider, 점수 Text,</text>
+  <text x="1282" y="522" class="body">표시 전용 UI</text>
+
+  <path d="M310 301H350" stroke="#2B6CB0" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M570 301H610" stroke="#2F855A" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <path d="M830 301H870" stroke="#C05621" stroke-width="4" marker-end="url(#arrowOrange)"/>
+  <path d="M1090 301H1130" stroke="#4A5568" stroke-width="4" marker-end="url(#arrowGray)"/>
+
+  <path d="M980 367V435H1260" stroke="#6B46C1" stroke-width="4" marker-end="url(#arrowGray)"/>
+  <path d="M200 367V500H1260" stroke="#3182CE" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrowBlue)"/>
+
+  <text x="430" y="285" class="flowLabel" fill="#2B6CB0">발사 기능 위에 구축</text>
+  <text x="690" y="285" class="flowLabel" fill="#2F855A">총알-적 상호작용 연결</text>
+  <text x="958" y="285" class="flowLabel" fill="#C05621">처치/게임 상태 관리 추가</text>
+  <text x="1182" y="285" class="flowLabel" fill="#4A5568">상태 기반 스폰 제어</text>
+  <text x="1098" y="430" class="flowLabel" fill="#6B46C1">점수/상태 표시</text>
+  <text x="520" y="492" class="flowLabel" fill="#3182CE">HP 표시</text>
+
+  <text x="90" y="585" class="section">2. 실제 게임 안에서의 흐름</text>
+
+  <rect x="100" y="640" width="240" height="140" rx="24" fill="#E8F2FF" stroke="#90CDF4" stroke-width="2"/>
+  <text x="124" y="680" class="taskName">HO_PlayerController</text>
+  <text x="124" y="710" class="body">입력 처리</text>
+  <text x="124" y="734" class="body">이동</text>
+  <text x="124" y="758" class="body">Fire1 입력 시 총알 생성</text>
+
+  <rect x="430" y="640" width="220" height="140" rx="24" fill="#EAFBF3" stroke="#9AE6B4" stroke-width="2"/>
+  <text x="454" y="680" class="taskName">HO_PlayerBullet</text>
+  <text x="454" y="710" class="body">위쪽으로 이동</text>
+  <text x="454" y="734" class="body">적과 충돌 시 대미지 전달</text>
+  <text x="454" y="758" class="body">충돌 후 자신 제거</text>
+
+  <rect x="740" y="640" width="220" height="140" rx="24" fill="#FFF6E8" stroke="#F6AD55" stroke-width="2"/>
+  <text x="764" y="680" class="taskName">HO_Enemy</text>
+  <text x="764" y="710" class="body">아래쪽으로 이동</text>
+  <text x="764" y="734" class="body">총알에 맞으면 피격 처리</text>
+  <text x="764" y="758" class="body">플레이어와 닿으면 접촉 대미지</text>
+
+  <rect x="1060" y="620" width="270" height="180" rx="24" fill="#F4EEFF" stroke="#B794F4" stroke-width="2"/>
+  <text x="1084" y="660" class="taskName">HO_GameManager</text>
+  <text x="1084" y="690" class="body">적 처치 점수 증가</text>
+  <text x="1084" y="714" class="body">현재 게임 진행 여부 관리</text>
+  <text x="1084" y="738" class="body">플레이어 사망 시 게임오버 전환</text>
+  <text x="1084" y="762" class="body">다른 시스템이 상태 조회</text>
+
+  <rect x="1060" y="860" width="270" height="160" rx="24" fill="#E9FAF7" stroke="#4FD1C5" stroke-width="2"/>
+  <text x="1084" y="900" class="taskName">HO_EnemySpawner</text>
+  <text x="1084" y="930" class="body">일정 간격으로 적 생성</text>
+  <text x="1084" y="954" class="body">GameManager 상태가 종료면 중단</text>
+  <text x="1084" y="978" class="body">SpawnX 범위와 SpawnY 사용</text>
+
+  <rect x="100" y="880" width="300" height="140" rx="24" fill="#FFF9E6" stroke="#ECC94B" stroke-width="2"/>
+  <text x="124" y="920" class="taskName">HO_UIController</text>
+  <text x="124" y="950" class="body">플레이어 HP Slider 갱신</text>
+  <text x="124" y="974" class="body">점수 Text 갱신</text>
+  <text x="124" y="998" class="body">게임플레이 로직은 직접 판단하지 않음</text>
+
+  <path d="M340 710H430" stroke="#2B6CB0" stroke-width="4" marker-end="url(#arrowBlue)"/>
+  <path d="M650 710H740" stroke="#2F855A" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <path d="M960 710H1060" stroke="#C05621" stroke-width="4" marker-end="url(#arrowOrange)"/>
+  <text x="365" y="695" class="flowLabel" fill="#2B6CB0">총알 생성</text>
+  <text x="670" y="695" class="flowLabel" fill="#2F855A">충돌 / 대미지</text>
+  <text x="972" y="695" class="flowLabel" fill="#C05621">처치 이벤트</text>
+
+  <path d="M850 780V830H250V880" stroke="#C05621" stroke-width="4" marker-end="url(#arrowOrange)"/>
+  <text x="504" y="846" class="flowLabel" fill="#C05621">플레이어 피격 시 HP 감소 전달</text>
+
+  <path d="M1195 800V860" stroke="#4A5568" stroke-width="4" marker-end="url(#arrowGray)"/>
+  <text x="1216" y="835" class="flowLabel" fill="#4A5568">상태 조회</text>
+
+  <path d="M1060 950H400" stroke="#319795" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <text x="664" y="934" class="flowLabel" fill="#319795">생성된 적이 전투 루프에 합류</text>
+
+  <path d="M1060 710C980 710 970 950 400 950" stroke="#6B46C1" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrowGray)"/>
+  <text x="720" y="915" class="flowLabel" fill="#6B46C1">점수 갱신 요청</text>
+
+  <path d="M220 780V880" stroke="#3182CE" stroke-width="4" stroke-dasharray="10 10" marker-end="url(#arrowBlue)"/>
+  <text x="236" y="834" class="flowLabel" fill="#3182CE">HP 갱신 요청</text>
+
+  <rect x="1360" y="635" width="140" height="385" rx="22" fill="#FCF5F5" stroke="#FEB2B2" stroke-width="2"/>
+  <text x="1386" y="675" class="taskName">핵심 종료 흐름</text>
+  <text x="1386" y="715" class="body">1. 적이 플레이어에게</text>
+  <text x="1386" y="737" class="body">접촉 대미지</text>
+  <text x="1386" y="775" class="body">2. Player HP가 0 이하</text>
+  <text x="1386" y="813" class="body">3. GameManager가</text>
+  <text x="1386" y="835" class="body">게임오버 전환</text>
+  <text x="1386" y="873" class="body">4. EnemySpawner가</text>
+  <text x="1386" y="895" class="body">추가 생성 중단</text>
+  <text x="1386" y="933" class="body">5. UI는 남은 HP와</text>
+  <text x="1386" y="955" class="body">점수를 계속 표시</text>
+
+  <rect x="90" y="1070" width="1410" height="60" rx="18" fill="#EDF2F7" stroke="#CBD5E0"/>
+  <text x="116" y="1108" class="note">요약: 01이 플레이어 축, 02와 03이 전투 루프, 04가 상태/점수 허브, 05가 적 공급, 06이 화면 표시를 맡는 구조입니다.</text>
+</svg>
