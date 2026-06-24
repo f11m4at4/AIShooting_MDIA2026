@@ -13,7 +13,8 @@
 
 ## 구현 내용
 
-1. `EnemyPrefab`을 일정 간격으로 생성한다.
+1. `EnemyPrefab`을 랜덤 시간 간격으로 생성한다.
+2. 랜덤 시간을 minTime, maxTime 변수를 이용해 계산한다.
 2. `SpawnInterval` 성격의 `[SerializeField] private float` 값으로 스폰 간격을 조정할 수 있게 한다.
 3. `SpawnXMin`, `SpawnXMax` 성격의 `[SerializeField] private float` 값으로 X 스폰 범위를 조정할 수 있게 한다.
 4. `SpawnY` 성격의 `[SerializeField] private float` 값으로 Y 스폰 위치를 조정할 수 있게 한다.
