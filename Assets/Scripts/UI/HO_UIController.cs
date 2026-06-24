@@ -98,7 +98,7 @@ public class HO_UIController : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = currentScore.ToString();
+            scoreText.text = "Score: " + currentScore.ToString();
         }
     }
 }
