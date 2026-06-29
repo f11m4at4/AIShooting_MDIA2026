@@ -440,6 +440,7 @@ public static class HO_CreateEnemyExplosionEffect
         velocityOverLifetime.space = ParticleSystemSimulationSpace.Local;
         velocityOverLifetime.x = new ParticleSystem.MinMaxCurve(-0.12f, 0.12f);
         velocityOverLifetime.y = new ParticleSystem.MinMaxCurve(-0.12f, 0.12f);
+        velocityOverLifetime.z = new ParticleSystem.MinMaxCurve(0f, 0f);
 
         var limitVelocity = particleSystem.limitVelocityOverLifetime;
         limitVelocity.enabled = true;

@@ -156,3 +156,4 @@ MonoBehaviour:
   moveSpeed: 3
   contactDamage: 1
   destroyY: -6
+  enemyExplosionPrefab: {fileID: 6501364637053243653, guid: 7a9360d3ded917d499b437669d8b8ea4, type: 3}

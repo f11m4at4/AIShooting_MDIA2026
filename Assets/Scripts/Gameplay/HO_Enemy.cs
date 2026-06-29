@@ -5,6 +5,7 @@ public class HO_Enemy : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private int contactDamage = 1;
     [SerializeField] private float destroyY = -6f;
+    [SerializeField] private GameObject enemyExplosionPrefab;
 
     private HO_GameManager gameManager;
     private bool isRemoving;
@@ -22,7 +23,7 @@ public class HO_Enemy : MonoBehaviour
             return;
         }
 
-        Remove(true);
+        Remove(true, true);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -47,7 +48,7 @@ public class HO_Enemy : MonoBehaviour
     {
         if (transform.position.y <= destroyY)
         {
-            Remove(false);
+            Remove(false, false);
         }
     }
 
@@ -66,10 +67,10 @@ public class HO_Enemy : MonoBehaviour
         }
 
         playerController.TakeDamage(contactDamage);
-        Remove(false);
+        Remove(false, true);
     }
 
-    private void Remove(bool awardScore)
+    private void Remove(bool awardScore, bool spawnExplosion)
     {
         if (isRemoving)
         {
@@ -91,6 +92,24 @@ public class HO_Enemy : MonoBehaviour
             }
         }
 
+        if (spawnExplosion)
+        {
+            SpawnExplosion();
+        }
+
         Destroy(gameObject);
+    }
+
+    private void SpawnExplosion()
+    {
+        if (enemyExplosionPrefab == null)
+        {
+            return;
+        }
+
+        Vector3 explosionPosition = transform.position;
+        explosionPosition.z = 0f;
+
+        Instantiate(enemyExplosionPrefab, explosionPosition, Quaternion.identity);
     }
 }
